@@ -1,100 +1,139 @@
-.customer {
+
+
+.slider-container {
 background-color: #FCFCFC;
-position: relative;
-height: 470px;
-width: 320px;
-   display: flex;
-    overflow: hidden;
-    flex-flow: row nowrap; 
-    align-items: flex-end;
+    display: flex;
+    align-items: center;
     justify-content: center;
-
+    height: 100%;
 }
 
-.customer__slider {
-    position: absolute;
-        top: 0;
-        left: 0;
-        width: 400%;
-        height: 100%;
-        -webkit-transition: left 0.4s;
-        transition: left 0.4s;
-        display: flex;
-        flex-flow: row nowrap;
+.slider {
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
 }
 
-.customer__slides {
-        height: 100%;
-            padding: 20px;
-            text-align: center;
-            display: flex;
-            flex: 1;
-            flex-flow: column nowrap;
-            align-items: center;
-            justify-content: center;
+.slides {
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
 }
 
-// .customer__img {
-// margin-bottom: 30px;
-// }
 
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 400px;
+    scroll-snap-align: center;
+    margin-right: 0px;
+    box-sizing: border-box;
+    transform-origin: center center;
+    transform: scale(1);
+    flex-direction: column;
+}
 
-.customer__review {
+.customer__img {
+    margin-bottom: 30px;
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+.slide__review {
     max-width: 280px;
     font-weight: 400;
-        font-size: 12px;
-        line-height: calc(31/12);
-  text-align: center;
-  padding: 34px 39px;
-  margin-bottom: 30px;
+    font-size: 12px;
+    line-height: calc(31/12);
+    text-align: center;
+    padding: 34px 39px;
+    margin-bottom: 30px;
     background: #84A178;
-        border-radius: 10px;
-        color: #FCFCFC;
+    border-radius: 10px;
+    color: #FCFCFC;
 }
 
-.customer__adress {
+.slide__adress {
     font-weight: 500;
-        font-size: 20px;
-        line-height: calc(37/20);
-        text-align: center;
+    font-size: 20px;
+    line-height: calc(37/20);
+    text-align: center;
     margin-bottom: 14px;
-        color: #131313;
+    color: #131313;
 }
 
+.slide a {
+    background: none;
+    border: none;
+}
 
-.customer__slider-nav {
+a.slide__prev,
+.slider::before {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 15%;
+}
+
+a.slide__next,
+.slider::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 15%;
+}
+
+.slider::before,
+.slider::after,
+.slide__prev,
+.slide__next {
+    position: absolute;
+    top: 48%;
+    width: 35px;
+    height: 35px;
+    border: solid transparent;
+    border-width: 0 4px 4px 0;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.slider::before,
+.slider::after {
+    content: "";
+    z-index: 1;
+    background: none;
+    pointer-events: none;
+}
+
+.slider__nav {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
+}
+
+.slider__navlink {
+    display: inline-block;
+    height: 12px;
     width: 12px;
-        height: 12px;
-        margin:14px;
-        border-radius: 50%;
-        z-index: 10;
-        outline: 6px solid #ccc;
-        outline-offset: -6px;
-        box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-        cursor: pointer;
-        appearance: none;
-        backface-visibility: hidden;
-}
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    ;
+    margin: 0 10px 0 10px;
 
-.customer__slider-nav:checked {
-    animation: check 0.4s linear forwards;
-    color: #84A178;
+    &:hover,
+    &:focus {
+        background-color: #84A178;
+    }
 }
-
-.customer__slider-nav:checked:nth-of-type(1)~.customer__slider {
-    left: 0%;
-}
-
-.customer__slider-nav:checked:nth-of-type(2)~.customer__slider {
-    left: -100%;
-}
-
-.customer__slider-nav:checked:nth-of-type(3)~.customer__slider {
-    left: -200%;
-}
-
-.customer__slider:checked:nth-of-type(4)~.customer__slider {
-    left: -300%;
-}
-
 
