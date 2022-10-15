@@ -1,0 +1,138 @@
+.contacts {background-color: var(--main-bg-cl);
+}
+.container {
+}
+.contacts__container {
+}
+.visually-hidden {
+}
+.list {
+}
+.contacts__list {
+    background-color: var(--main-bg-cl);
+    margin-bottom: 32px;
+
+}
+.item {
+}
+.contacts__item {
+    background-color: var(--light-bg-cl);
+    box-shadow: var(--contacts-products-box-shadow);
+    padding: 40px 32px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+    width: 100%;
+       &:last-child{
+           margin-bottom: 0;}
+
+}
+.contacts__subtitle {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 186%;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+
+color: #131313;
+width: 80px;
+height: 16px;
+left: 52px;
+top: 4734.56px;
+
+background: #F8D24E;
+border-radius: 4px;
+}
+.contacts__article {
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 186%;
+letter-spacing: 0.04em;
+
+color: #131313;
+}
+.contacts__link {
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 183%;
+/* or 22px */
+letter-spacing: 0.04em;
+
+color: #D6936D;
+border-bottom: 1px solid #E1E1E1;
+}
+.contacts__date {
+}
+.contacts__time {
+}
+.contacts__text {
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 186%;
+/* identical to box height, or 22px */
+
+color: #131313;
+}
+.contacts__contact {
+}
+.contacts__communication {
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+/* or 150% */
+
+color: #131313;
+}
+.link {
+}
+.contacts__connexion {
+}
+.contacts__modal {
+}
+.contacts__button {
+
+
+}
+.contacts__btn {
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #131313;
+
+background-color: F8D24E;
+border-color: F8D24E;
+flex-basis: calc((100% - 30px) / 2);
+margin-bottom: 16px;
+&:last-child {
+    margin-bottom: 0;
+}
+}
+.btn__current {
+}
+.contacts__icons {
+    width: 12px;
+height: 12px;
+left: 150px;
+top: 15px;
+fill: var(--black-txt-cl);
+}
