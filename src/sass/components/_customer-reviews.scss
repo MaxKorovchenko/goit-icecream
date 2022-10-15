@@ -9,14 +9,24 @@ background-color: #FCFCFC;
 }
 
 .slider {
-    width: 100%;
     max-width: 350px;
     height: 400px;
-    margin: 20px;
+    padding: 20px;
     text-align: center;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+
+    @media screen and (min-width:768px) {
+            max-width: 768px;
+            height: 500px;
+        }
+
+                @media screen and (min-width:1200px) {
+                    max-width: 1200px;
+                    height: 500px;
+                }
+
 }
 
 .slides {
@@ -30,7 +40,7 @@ background-color: #FCFCFC;
 
 .slide {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     flex-shrink: 0;
     width: 100%;
@@ -41,6 +51,13 @@ background-color: #FCFCFC;
     transform-origin: center center;
     transform: scale(1);
     flex-direction: column;
+
+    @media screen and(min-width:768px) {
+        justify-content: flex-end;
+        
+    }
+
+        
 }
 
 .customer__img {
@@ -50,7 +67,7 @@ background-color: #FCFCFC;
 }
 
 .slide__review {
-    max-width: 280px;
+    width: 280px;
     font-weight: 400;
     font-size: 12px;
     line-height: calc(31/12);
@@ -60,6 +77,24 @@ background-color: #FCFCFC;
     background: #84A178;
     border-radius: 10px;
     color: #FCFCFC;
+
+    @media screen and (min-width:768px) {
+        font-size: 14px;
+            line-height: calc(26/14);
+            width: 705px;
+            margin-bottom: 32px;
+            padding: 28px 80px;
+    }
+
+         @media screen and (min-width:1200px) {
+            font-size: 16px;
+                line-height: calc(30/16);
+                width: 968px;
+                margin-bottom: 32px;
+                padding: 40px 109px;
+         }
+
+       
 }
 
 .slide__adress {
@@ -69,6 +104,13 @@ background-color: #FCFCFC;
     text-align: center;
     margin-bottom: 14px;
     color: #131313;
+
+    @media screen and (min-width:768px) {
+            font-size: 16px;
+            line-height: calc(30/16);
+            margin-bottom: 32px;
+            
+        }
 }
 
 .slide a {
