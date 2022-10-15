@@ -1,143 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="header-navigation">
-      <div class="container">
-        <nav class="navigation">
-          <div class="header-logo">
-            <svg width="60" height="65">
-              <use href="/src/images/icon_sprite.svg#logo"></use>
-            </svg>
-          </div>
-          <div class="header-menu">
-            <ul class="site-nav">
-              <li class="site-nav_item">
-                <a href="./index.html" class="nav care">Home</a>
-              </li>
-              <li class="site-nav_item">
-                <a href="./about.html" class="nav care">How it’s made?</a>
-              </li>
-              <li class="site-nav_item">
-                <a href="./products.html" class="nav care">Our products</a>
-              </li>
-              <li class="site-nav_item">
-                <a href="./contacts.html" class="nav care">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div class="button-header">
-          <button class="btn-header" type="button" data-modal-open>
-            Buy now
-            <svg class="btn-icon" width="12" height="12">
-              <use href="/src/images/icon_sprite.svg#arrow-btn"></use>
-            </svg>
-          </button>
-        </div>
+<!-- hero-header -->
+
+<header class="header-navigation">
+  <div class="container">
+    <nav class="navigation">
+      <div class="header-logo">
+        <svg width="60" height="65">
+          <use href="/src/images/icon_sprite.svg#logo"></use>
+        </svg>
       </div>
-    </header>
-    <section class="hero">
-      <div class="container">
-        <h1 class="hero-title">ice cream made with passion</h1>
-        <div class="hero-button">
-          <button class="btn-hero" type="button">Products</button>
-          <button class="btn-hero" type="button">How it’s made?</button>
-        </div>
+      <div class="header-menu">
+        <ul class="site-nav">
+          <li class="site-nav_item">
+            <a href="./index.html" class="site-nav_link">Home</a>
+          </li>
+          <li class="site-nav_item">
+            <a href="./about.html" class="site-nav_link">How it’s made?</a>
+          </li>
+          <li class="site-nav_item">
+            <a href="./products.html" class="site-nav_link">Our products</a>
+          </li>
+          <li class="site-nav_item">
+            <a href="./contacts.html" class="site-nav_link">Contact</a>
+          </li>
+        </ul>
       </div>
-      <div class="hero-suggestions">
-        <div class="hero-proverb">
-          <picture>
-            <!-- Desktop screen -->
-            <source
-              media="(min-width: 1200px)"
-              srcset=". 1x, . 2x"
-              type="image/jpg"
-            />
-            <!-- Tablet screen -->
-            <source
-              media="(min-width: 768px)"
-              srcset=". 1x, . 2x"
-              type="image/jpg"
-            />
-            <!-- Mobile screen -->
-            <source
-              media="(max-width: 767px)"
-              srcset=". 1x, . 2x"
-              type="image/jpg"
-            />
-            <img src="./" alt="plate of ice cream" width="225" height="225" />
-          </picture>
-          <div class="proverb">
-            <p class="proverb__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et
-            </p>
-            <svg class="btn-proverb" width="40">
-              <use href="/src/images/icon_sprite.svg#arrow"></use>
-            </svg>
-          </div>
-        </div>
-        <div class="hero-advertising">
-          <picture>
-            <!-- Desktop screen -->
-            <source
-              media="(min-width: 1200px)"
-              srcset=". 1x, . 2x"
-              type="image/jpg"
-            />
-            <!-- Tablet screen -->
-            <source
-              media="(min-width: 768px)"
-              srcset=". 1x, . 2x"
-              type="image/jpg"
-            />
-            <!-- Mobile screen -->
-            <source
-              media="(max-width: 767px)"
-              srcset=". 1x, . 2x"
-              type="image/jpg"
-            />
-            <img src="./" alt="ice cream cone" width="447" height="561" />
-          </picture>
-          <div class="advertising-smiley">
-            <ul>
-              <li>
-                <svg class="" width="40">
-                  <use href="/src/images/icon_sprite.svg#"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="" width="40">
-                  <use href="/src/images/icon_sprite.svg#"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="" width="40">
-                  <use href="/src/images/icon_sprite.svg#"></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
-          <div class="amount">
-            <ul class="amount-list">
-              <li>
-                <p class="amount-text">cafes</p>
-                <p class="amount-numbers">16</p>
-              </li>
-              <li>
-                <p class="amount-text">food trucks</p>
-                <p class="amount-numbers">23</p>
-              </li>
-            </ul>
-          </div>
-        </div>
+    </nav>
+    <div class="button-header">
+      <button class="btn-header" type="button" data-modal-open>
+        Buy now
+        <svg class="btn-header__icon" width="12" height="12">
+          <use href="/src/images/icon_sprite.svg#arrow-btn"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-title">ice cream made with passion</h1>
+    <div class="hero-button">
+      <button class="btn-hero" type="button">Products</button>
+      <button class="btn-hero" type="button">How it’s made?</button>
+    </div>
+  </div>
+  <div class="hero-suggestions">
+    <div class="hero-proverb">
+      <picture>
+        <!-- Desktop screen -->
+        <source
+          media="(min-width: 1200px)"
+          srcset=". 1x, . 2x"
+          type="image/jpg"
+        />
+        <!-- Tablet screen -->
+        <source
+          media="(min-width: 768px)"
+          srcset=". 1x, . 2x"
+          type="image/jpg"
+        />
+        <!-- Mobile screen -->
+        <source
+          media="(max-width: 767px)"
+          srcset=". 1x, . 2x"
+          type="image/jpg"
+        />
+        <img src="./" alt="plate of ice cream" width="225" height="225" />
+      </picture>
+      <div class="proverb">
+        <p class="proverb__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <svg class="btn-proverb" width="40">
+          <use href="/src/images/icon_sprite.svg#arrow"></use>
+        </svg>
       </div>
-    </section>
-  </body>
-</html>
+    </div>
+    <div class="hero-advertising">
+      <picture>
+        <!-- Desktop screen -->
+        <source
+          media="(min-width: 1200px)"
+          srcset=". 1x, . 2x"
+          type="image/jpg"
+        />
+        <!-- Tablet screen -->
+        <source
+          media="(min-width: 768px)"
+          srcset=". 1x, . 2x"
+          type="image/jpg"
+        />
+        <!-- Mobile screen -->
+        <source
+          media="(max-width: 767px)"
+          srcset=". 1x, . 2x"
+          type="image/jpg"
+        />
+        <img src="./" alt="ice cream cone" width="447" height="561" />
+      </picture>
+      <div class="amount">
+        <ul class="amount-we">
+          <li class="amount-we__item">
+            <p class="amount-text">cafes</p>
+            <p class="amount-numbers">16</p>
+          </li>
+          <li class="amount-we__item">
+            <p class="amount-text">food trucks</p>
+            <p class="amount-numbers">23</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
