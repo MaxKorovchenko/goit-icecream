@@ -3,7 +3,7 @@
 <header class="header" id="Home">
   <div class="container header__container">
     <div class="header-logo">
-      <svg width="60" height="65">
+      <svg class="header-logo__icon">
         <use href="/src/images/icon_sprite.svg#logo"></use>
       </svg>
     </div>
@@ -26,41 +26,43 @@
       </ul>
     </nav>
     <ul class="header-buttons__list">
-      <li class="header-buttons__item">
-        <button
-          class="header-menu__button menu-toggle js-open-menu"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg class="header-menu__burger" width="32" height="32">
-            <use href="/src/images/icon_sprite.svg#menu"></use>
-          </svg>
-        </button>
+      <li class="header-menu__btn">
+        <div class="btn-burger">
+          <button
+            class="header-menu__button js-open-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="header-menu__burger" width="32" height="32">
+              <use href="/src/images/icon_sprite.svg#menu"></use>
+            </svg>
+          </button>
+        </div>
       </li>
-      <li class="header-buttons__item">
-        <button class="header-modal__button" type="button" data-modal-open>
-          Buy now
-          <svg class="header-modal__icon" width="12" height="12">
-            <use href="/src/images/icon_sprite.svg#arrow-btn"></use>
-          </svg>
-        </button>
+      <li class="header-menu__icon">
+        <div class="btn-buy">
+          <button class="header-modal__button" type="button" data-modal-open>
+            Buy now
+            <svg class="header-modal__icon" width="12" height="12">
+              <use href="/src/images/icon_sprite.svg#arrow-btn"></use>
+            </svg>
+          </button>
+        </div>
       </li>
     </ul>
   </div>
 
   <!-- Mobile menu -->
-  <div class="menu-container js-menu-container" id="mobile-menu">
-    <div class="mobile-menu__wrapper">
-      <svg class="mobile-menu__logo" width="40.47" height="31">
-        <use href="/src/images/icon_sprite.svg#logo"></use>
+  <div class="menu-container js-menu-container is-open" id="mobile-menu">
+    <svg class="mobile-menu__logo" width="40" height="31">
+      <use href="/src/images/icon_sprite.svg#logo"></use>
+    </svg>
+    <button class="menu-toggle js-close-menu">
+      <svg width="32" height="32">
+        <use href="/src/images/icon_sprite.svg#close-modal"></use>
       </svg>
-      <button class="mobile-menu-btn menu-toggle js-close-menu">
-        <svg width="32" height="32">
-          <use href="/src/images/icon_sprite.svg#close-modal"></use>
-        </svg>
-      </button>
-    </div>
+    </button>
 
     <ul class="mobile-nav__list">
       <li class="mobile-nav__item">
@@ -76,12 +78,15 @@
         <a href="#contacts" class="mobile-nav__link">Contact</a>
       </li>
     </ul>
-    <button class="btn-mobile" type="button" data-modal-open>
-      Buy now
-      <svg class="btn-mobile__icon" width="12" height="12">
-        <use href="/src/images/icon_sprite.svg#arrow-btn"></use>
-      </svg>
-    </button>
+
+    <div class="btn-mobile">
+      <button class="header-modal__button" type="button" data-modal-open>
+        Buy now
+        <svg class="btn-mobile__icon" width="12" height="12">
+          <use href="/src/images/icon_sprite.svg#arrow-btn"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -189,11 +194,3 @@
     </div>
   </div>
 </section>
-
-<script
-  defer
-  src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-  integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-  crossorigin="anonymous"
-></script>
-<script defer src="./js/mobile-menu.js"></script>
