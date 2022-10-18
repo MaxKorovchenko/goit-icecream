@@ -62,6 +62,7 @@
 
 .site-nav__list {
   padding-bottom: 9px;
+
   @media (min-width: 1200px) {
     display: flex;
     align-items: center;
@@ -221,6 +222,12 @@
 
   &.is-open {
     transform: translateX(0);
+  }
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
   }
 
   @media screen and (min-width: 768px) {
