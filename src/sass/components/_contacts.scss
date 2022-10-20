@@ -1,18 +1,18 @@
 .contacts {
     position: relative;
-height: 1040px;
+height: 1020px;
 
-    @include section($pt: null, $pb: 40px);
+    @include section($pt: null, $pb: 20px);
     background-color: var(--main-bg-cl);
 
 
     @media screen and (min-width: 768px){
-height: 335px;
+height: 313px;
     } 
 
     @media screen and (min-width: 1200px) {
-    @include section($pt: null, $pb: 120px); 
-    height: 662px; 
+    @include section($pt: null, $pb: 60px); 
+    height: 600px; 
     }
 }
 
@@ -231,15 +231,7 @@ height: 335px;
     }
 
 }
-.contacts__icons {
-    width: 12px;
-    height: 12px;
-    fill: var(--black-txt-cl);
-    @include transition(fill, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
-    &{
-        stroke: currentColor
-    }
-}
+
 
 
 .contacts__btn {
@@ -254,7 +246,7 @@ height: 335px;
 
     border: 2px solid var(--default-btn-cl);
     border-radius: 10px; 
-    @include transition(color, border-color, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+    @include transition(color, border-color, fill, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
     margin: 0 auto;
     margin-bottom: 16px;
 
@@ -265,15 +257,18 @@ height: 335px;
     @media screen and (min-width:768px) {
         margin: 0;
     }
-}
-
-.contacts__btn:hover {
-    border-color: var(--focus-btn-cl);
-}
-
-.contacts__btn:focus {
-    border-color: var(--focus-btn-cl);
-    color: var(--light-txt-cl)
+    &:hover {
+        border-color: var(--focus-btn-cl);
+    }
+    
+    &:focus {
+        border-color: var(--focus-btn-cl);
+        color: var(--light-txt-cl);
+        fill: var(--light-txt-cl);
+    }
+    &:disabled {
+        border-color: var(--disabled-btn-cl);
+      }
 }
 
 .current__btn {
@@ -286,18 +281,25 @@ height: 335px;
     @media screen and (min-width:768px) {
         text-shadow: none;
     }
-}
 
-.current__btn:hover {
+&:hover {
     background-color: var(--focus-btn-cl);
 }
 
-.current__btn:focus {
+&:focus {
     background-color: var(--focus-btn-cl);
     color: var(--light-txt-cl)
 }
-
-
+&:disabled {
+    background-color: var(--disabled-btn-cl);
+}
+}
+.contacts__icons {
+    fill: var(--black-txt-cl);
+    stroke: currentColor;
+    stroke-width: 0.05px;
+    @include transition(fill, null, null, 250ms, cubic-bezier(0.4, 0, 0.2, 1));
+}
 
 
 
